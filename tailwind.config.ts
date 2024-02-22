@@ -19,7 +19,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        bricolageGrotesque: ["Bricolage Grotesque", "sans-serif"],
+        publicSans: ["Public Sans", "sans-serif"],
       },
       borderColor: {
         DEFAULT: "black",
