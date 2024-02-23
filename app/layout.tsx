@@ -18,7 +18,7 @@ export default function RootLayout({
       <AuthProvider>
         <body className="font-publicSans">
           <Header />
-          <main className="container">{children}</main>
+          <main>{children}</main>
         </body>
       </AuthProvider>
     </html>
