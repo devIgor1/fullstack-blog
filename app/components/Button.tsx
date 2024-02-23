@@ -23,7 +23,7 @@ const Button = () => {
   if (session) {
     return (
       <div className="text-white bg-black p-4 flex items-center justify-center flex-col">
-        <h1>Hi, {session.user.name}</h1>
+        <h1>Hi, {session?.user?.name}</h1>
         <button onClick={handleLogoutUser} className="mt-5">
           <CiLogout size={25} />
         </button>
