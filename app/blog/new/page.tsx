@@ -1,11 +1,11 @@
-import NewPostForm from "./components/NewPostForm"
+import NewBlogForm from "./components/NewBlogForm"
 
-const Page = () => {
+const page = async () => {
   return (
-    <>
-      <NewPostForm />
-    </>
+    <div>
+      <NewBlogForm />
+    </div>
   )
 }
 
-export default Page
+export default page
