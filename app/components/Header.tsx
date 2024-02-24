@@ -9,7 +9,7 @@ const Header = () => {
     <div className="border-b border-black flex justify-between">
       <Link href="/" className="flex items-center px-2">
         <Image src="/logo.png" width={50} height={50} alt="logo.png" />
-        <h1 className="text-4xl px-2 py-4">Papers</h1>
+        <h1 className="text-5xl px-2 py-4">Papers</h1>
       </Link>
       <Button />
     </div>

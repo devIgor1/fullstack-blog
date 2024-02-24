@@ -1,8 +1,8 @@
 "use client"
 import { signIn, signOut, useSession } from "next-auth/react"
 import Link from "next/link"
-import { CiLogout } from "react-icons/ci"
 import { ImSpinner2 } from "react-icons/im"
+import { BiLogOut } from "react-icons/bi"
 
 export const Button = () => {
   const { data: session, status } = useSession()
@@ -29,15 +29,21 @@ export const Button = () => {
         </Link>
         <div className="text-white bg-black p-4 flex items-center justify-center flex-col">
           <h1>Hi, {session?.user?.name}</h1>
-          <button onClick={handleLogoutUser} className="mt-5">
-            <CiLogout size={25} />
+          <button
+            onClick={handleLogoutUser}
+            className="mt-5 hover:scale-105 duration-300"
+          >
+            <BiLogOut size={30} />
           </button>
         </div>
       </div>
     )
   }
   return (
-    <button onClick={() => signIn()} className="text-white bg-black p-4">
+    <button
+      onClick={() => signIn()}
+      className="text-white bg-black p-4 hover:underline"
+    >
       Sign In
     </button>
   )
