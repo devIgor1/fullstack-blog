@@ -21,6 +21,11 @@ export default withUt({
       },
       fontFamily: {
         publicSans: ["Public Sans", "sans-serif"],
+        softSans: "SoftSans",
+      },
+      backgroundImage: {
+        primary: "url(/primary.svg)",
+        hero: "url(/hero.svg)",
       },
       borderColor: {
         DEFAULT: "black",
