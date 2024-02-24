@@ -4,8 +4,8 @@ import Header from "./components/Header"
 import { AuthProvider } from "@/providers/auth"
 
 export const metadata: Metadata = {
-  title: "Coffers",
-  description: "A complete blog",
+  title: "Papers",
+  description: "A full-stack blog",
 }
 
 export default function RootLayout({
