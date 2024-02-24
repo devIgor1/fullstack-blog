@@ -20,8 +20,7 @@ export default withUt({
         },
       },
       fontFamily: {
-        publicSans: ["Public Sans", "sans-serif"],
-        softSans: "SoftSans",
+        pally: "Pally",
       },
       backgroundImage: {
         primary: "url(/primary.svg)",
