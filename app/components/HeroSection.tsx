@@ -26,7 +26,7 @@ const HeroSection = () => {
           </ul>
           <Link
             href="/blog/all"
-            className="text-white block w-fit bg-indigo-500 px-4 py-2 sm:px-6 sm:py-4 mt-3 border-2 rounded shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] mx-auto md:mx-0 active:scale-90 duration-300"
+            className="text-white block w-fit bg-indigo-500 px-4 py-2 sm:px-6 sm:py-4 mt-3 border-2 rounded shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] mx-auto md:mx-0 active:scale-90 duration-300 hover:scale-105"
           >
             Browse Articles
           </Link>
