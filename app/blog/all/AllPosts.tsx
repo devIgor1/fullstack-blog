@@ -12,10 +12,12 @@ export type PostListProps = {
 export const AllPosts = (props: PostListProps) => {
   return (
     <div className="border-2 px-7 py-11 rounded-sm mx-4">
-      <h2 className="text-4xl text-center mb-14 container">All Articles</h2>
+      <h2 className="text-4xl text-center mb-14 container underline">
+        All Articles
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mx-4">
         {props.posts.map((post: Post) => (
-          <div key={post.id} className="w-full h-full">
+          <div key={post.id} className="w-full h-full ">
             <Link
               href={`/blog/${post.id}`}
               className="block cursor-pointer border-2 rounded-md neo-shadow focus:shadow-none focus:translate-x-1 focus:translate-y-1 transform transition-shadow duration-100"
