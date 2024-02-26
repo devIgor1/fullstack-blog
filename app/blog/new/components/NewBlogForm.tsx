@@ -1,7 +1,6 @@
 "use client"
 
 import { createPost } from "@/app/actions/publishPost"
-import type { Category } from "@prisma/client"
 import { Prisma } from "@prisma/client"
 import { useSession } from "next-auth/react"
 import Link from "next/link"
@@ -20,9 +19,6 @@ const NewBlogForm = () => {
   const [postID, setPostID] = useState<number | null>(null)
 
   const [submitted, setSubmitted] = useState<boolean>(false)
-
-  if (!session && status !== "loading")
-    return <div>You must be signed in to post</div>
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
