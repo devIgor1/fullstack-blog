@@ -31,11 +31,14 @@ export const AllPosts = (props: PostListProps) => {
                       className="w-full md:h-[200px] lg:h-full object-cover"
                     />
                   ) : (
-                    <img
-                      src="/article-placeholder.png"
-                      alt="thumbnail"
-                      className="w-full h-full object-center object-cover"
-                    />
+                    <div className="flex items-center justify-center flex-col h-full">
+                      <img
+                        src="/nothumbnail.svg"
+                        alt="thumbnail"
+                        className="w-[100px] h-[100px]"
+                      />
+                      <h1 className="text-4xl">No thumbnail...</h1>
+                    </div>
                   )}
                 </figure>
               </article>
