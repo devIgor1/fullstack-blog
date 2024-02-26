@@ -39,7 +39,7 @@ const page = async ({
               ></div>
               <p className="text-sm text-gray-500">{post.author.name}</p>
             </div>
-            <p className="mt-4">{post.content}</p>
+            <p className="mt-4 whitespace-pre-wrap">{post.content}</p>
           </div>
         </>
       )}

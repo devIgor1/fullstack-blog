@@ -78,12 +78,12 @@ const NewBlogForm = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <div className="self-start">
+        <div className="self-start mt-10">
           {thumbnail && (
             <img
               src={thumbnail}
               alt="Thumbnail"
-              className="w-36 h-36 rounded-md object-cove mb-4"
+              className="w-[350px] h-[150px] rounded-md object-cove mb-4"
             />
           )}
 
