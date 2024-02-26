@@ -1,6 +1,6 @@
 import React from "react"
-import { prisma } from "@/lib/prisma"
 import Image from "next/image"
+import prisma from "@/lib/prisma"
 
 const page = async ({
   params,
