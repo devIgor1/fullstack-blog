@@ -3,6 +3,8 @@ import { signIn, signOut, useSession } from "next-auth/react"
 import Link from "next/link"
 import { ImSpinner2 } from "react-icons/im"
 import { BiLogOut } from "react-icons/bi"
+import Image from "next/image"
+import handWriting from "../../public/write.png"
 
 export const Button = () => {
   const { data: session, status } = useSession()
@@ -24,10 +26,20 @@ export const Button = () => {
   if (session) {
     return (
       <div className="flex items-stretch">
-        <Link href="/blog/new" className="mr-6 hover:underline self-center">
-          ✍️ Write a Post
+        <Link
+          href="/blog/new"
+          className="mr-6 hover:underline self-center flex items-center flex-col md:flex-row"
+        >
+          <Image
+            src={handWriting}
+            width={40}
+            height={40}
+            alt="hand.png"
+            className="mb-2"
+          />
+          Write a Post
         </Link>
-        <div className="text-white bg-black p-4 flex items-center justify-center flex-col">
+        <div className="text-white bg-black px-4 py-2 flex items-center justify-center flex-col">
           <h1>Hi, {session?.user?.name}</h1>
           <button
             onClick={handleLogoutUser}
