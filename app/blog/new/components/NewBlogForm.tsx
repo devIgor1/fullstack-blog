@@ -5,9 +5,11 @@ import { Prisma } from "@prisma/client"
 import { useSession } from "next-auth/react"
 import Link from "next/link"
 import React, { useState } from "react"
+import sun from "../../../../public/SUN.svg"
 
 import { UploadButton } from "@/utils/uploadthing"
 import "@uploadthing/react/styles.css"
+import Image from "next/image"
 
 const NewBlogForm = () => {
   const { data: session, status } = useSession()
@@ -44,12 +46,19 @@ const NewBlogForm = () => {
 
   if (submitted)
     return (
-      <div className="py-2 container flex flex-col mt-12">
-        <div className="flex flex-col flex-1 items-stretch justify-center h-full text-left border p-8">
-          <h1 className="text-4xl">Your post has been published:</h1>
+      <div className="py-2 container flex items-center justify-center mt-12 px-5">
+        <div className="flex justify-center border p-8 items-center flex-col">
+          <h1 className="text-4xl">Your post has been published!</h1>
+          <Image
+            src={sun}
+            width={300}
+            height={300}
+            alt="sun.svg"
+            className="mx-auto"
+          />
           <Link
             href={`/blog/${postID}`}
-            className="text-indigo-500 text-xl mt-4"
+            className="text-indigo-500 text-xl mt-4 hover:underline"
           >
             Click here to view
           </Link>
