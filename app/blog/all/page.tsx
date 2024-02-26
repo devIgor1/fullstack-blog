@@ -10,7 +10,7 @@ const page = async () => {
 
   return (
     <>
-      <div className="container flex items-center justify-center md:justify-start ">
+      <div className="container flex items-center justify-center">
         <Link
           href="/"
           className="mx-5 flex items-center justify-center hover:underline "
@@ -22,11 +22,10 @@ const page = async () => {
             alt="backArrow.svg"
             className="rotate-180"
           />
-          <h1 className="text-3xl">Back to home</h1>
+          <h1 className="text-4xl">Back to home</h1>
         </Link>
       </div>
-      <div className="my-24 container">
-        <h2 className="text-4xl text-center underline mb-16">All Articles</h2>
+      <div className=" container">
         <AllPosts posts={posts} />
       </div>
     </>
