@@ -25,6 +25,7 @@ export default withUt({
       backgroundImage: {
         primary: "url(/primary.svg)",
         hero: "url(/hero.svg)",
+        footer: "url(/footer.svg)",
       },
       borderColor: {
         DEFAULT: "black",
