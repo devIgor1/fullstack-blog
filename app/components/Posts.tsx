@@ -1,6 +1,7 @@
 import React from "react"
 import { PrismaClient } from "@prisma/client"
 import PostCard from "./PostCard"
+import Image from "next/image"
 
 const prisma = new PrismaClient()
 
@@ -16,8 +17,17 @@ const Posts = async () => {
 
   return (
     <div>
-      <h2 className="text-4xl text-center mt-6">Trending</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-4 mx-4 ">
+      <div className="flex items-center gap-5 justify-center relative ">
+        <h2 className="text-4xl text-center mt-4 absolute">Trending</h2>
+        <Image
+          src="/arrow.svg"
+          width={150}
+          height={150}
+          alt="arrow.png"
+          className="relative -right-28 top-10"
+        />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8 mx-4 ">
         {posts.map((post, index) => (
           <PostCard key={post.id} post={post} className={bgClasses[index]} />
         ))}
