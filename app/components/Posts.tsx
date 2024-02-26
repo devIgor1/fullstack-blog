@@ -1,9 +1,7 @@
 import React from "react"
-import { PrismaClient } from "@prisma/client"
 import PostCard from "./PostCard"
 import Image from "next/image"
-
-const prisma = new PrismaClient()
+import prisma from "@/lib/prisma"
 
 const Posts = async () => {
   const posts = await prisma.post.findMany({

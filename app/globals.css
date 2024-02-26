@@ -18,3 +18,20 @@
     @apply shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] hover:shadow-[0.5rem_0.5rem_0px_0px_rgba(0,0,0,1)];
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
