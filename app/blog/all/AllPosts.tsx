@@ -13,10 +13,7 @@ export const AllPosts = (props: PostListProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-4 mx-4">
       {props.posts.map((post: Post) => (
-        <div
-          key={post.id}
-          className="w-full sm:w-32 md:w-60 lg:w-80 h-full bg-white"
-        >
+        <div key={post.id} className="w-full md:w-60 lg:w-80 h-full">
           <Link
             href={`/blog/${post.id}`}
             className="block cursor-pointer border-2 rounded-md neo-shadow focus:shadow-none focus:translate-x-1 focus:translate-y-1 transform transition-shadow duration-100"
@@ -27,7 +24,7 @@ export const AllPosts = (props: PostListProps) => {
                   <img
                     src={post.imgURL}
                     alt="thumbnail"
-                    className="w-full h-full object-cover"
+                    className="w-full md:h-[200px] lg:h-full object-cover"
                   />
                 ) : (
                   <img
@@ -44,7 +41,7 @@ export const AllPosts = (props: PostListProps) => {
                   ? format(new Date(post.createdAt), "dd/MM/yyyy, HH:mm:ss")
                   : ""}
               </p>
-              <h1 className="text-xl mb-4">{post.title}</h1>
+              <h1 className="text-xl mb-4 line-clamp-1">{post.title}</h1>
               <p className="text-xs mb-4 line-clamp-4">{post.content}</p>
               <p className="text-indigo-600 hover:underline">Read More</p>
             </div>
