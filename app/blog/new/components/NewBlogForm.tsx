@@ -10,6 +10,7 @@ import { UploadButton } from "@/utils/uploadthing"
 import "@uploadthing/react/styles.css"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+import { toast } from "sonner"
 
 const NewBlogForm = () => {
   const router = useRouter()
@@ -30,6 +31,11 @@ const NewBlogForm = () => {
     const userId = user?.id
 
     if (!userId) return
+
+    if (!title || !content) {
+      return toast.error("Title or content is required.")
+    }
+
     try {
       let newPost: Prisma.PostUncheckedCreateInput = {
         title,
