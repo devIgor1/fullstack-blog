@@ -1,15 +1,12 @@
-import { prisma } from "@/lib/prisma"
-import { Post } from "@prisma/client"
+import { Post, PrismaClient } from "@prisma/client"
 import { format } from "date-fns"
 import Image from "next/image"
 import Link from "next/link"
 import back from "../../../public/backArrow.svg"
 
-export type AllPostsProps = {
-  posts: Post[]
-}
-
 const page = async () => {
+  const prisma = new PrismaClient()
+
   const posts = await prisma.post.findMany()
 
   return (
