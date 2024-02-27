@@ -5,7 +5,7 @@ import back from "../../../public/backArrow.svg"
 import { AllPosts } from "./AllPosts"
 
 const page = async () => {
-  const posts = await prisma.post.findMany()
+  const posts = await prisma.post.findMany({})
 
   return (
     <>
