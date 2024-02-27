@@ -1,9 +1,9 @@
 import React from "react"
 import { AllPosts } from "./AllPosts"
-import prisma from "@/lib/prisma"
 import back from "../../../public/backArrow.svg"
 import Image from "next/image"
 import Link from "next/link"
+import prisma from "@/lib/prisma"
 
 const page = async () => {
   const posts = await prisma.post.findMany()
@@ -25,7 +25,7 @@ const page = async () => {
           <h1 className="text-4xl">Back to home</h1>
         </Link>
       </div>
-      <div className=" container">
+      <div className="container">
         <AllPosts posts={posts} />
       </div>
     </>
