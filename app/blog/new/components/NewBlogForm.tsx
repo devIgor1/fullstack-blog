@@ -6,12 +6,14 @@ import { useSession } from "next-auth/react"
 import Link from "next/link"
 import React, { useState } from "react"
 import sun from "../../../../public/SUN.svg"
-
 import { UploadButton } from "@/utils/uploadthing"
 import "@uploadthing/react/styles.css"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 const NewBlogForm = () => {
+  const router = useRouter()
+
   const { data: session, status } = useSession()
 
   const [title, setTitle] = useState<string>("")
@@ -39,6 +41,7 @@ const NewBlogForm = () => {
       const post = await createPost(newPost)
       setPostID(post.id)
       setSubmitted(true)
+      router.refresh()
     } catch (error) {
       console.log(error)
     }

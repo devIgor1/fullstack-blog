@@ -5,11 +5,11 @@ import { format } from "date-fns"
 
 type Post = Prisma.PostGetPayload<{}>
 
-export type PostListProps = {
+export type AllPostsProps = {
   posts: Post[]
 }
 
-export const AllPosts = (props: PostListProps) => {
+export const AllPosts = (props: AllPostsProps) => {
   return (
     <div className="border-2 px-7 py-11 rounded-sm mx-4">
       <h2 className="text-4xl text-center mb-14 container underline">
