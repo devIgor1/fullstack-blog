@@ -1,12 +1,8 @@
-import prisma from "@/lib/prisma"
 import Image from "next/image"
 import Link from "next/link"
 import back from "../../../public/backArrow.svg"
-import { AllPosts } from "./AllPosts"
 
 const page = async () => {
-  const posts = await prisma.post.findMany()
-
   return (
     <>
       <div className="container flex items-center justify-center">
@@ -24,9 +20,7 @@ const page = async () => {
           <h1 className="text-4xl">Back to home</h1>
         </Link>
       </div>
-      <div className="container">
-        <AllPosts posts={posts} />
-      </div>
+      <div className="container"></div>
     </>
   )
 }
