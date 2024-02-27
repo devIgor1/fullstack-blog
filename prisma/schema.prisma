@@ -64,13 +64,7 @@ model Post {
   published  Boolean    @default(false)
   author     User       @relation(fields: [authorId], references: [id])
   authorId   Int
-  categories Category[]
   imgURL     String?
   createdAt  DateTime   @default(now())
 }
 
-model Category {
-  id    Int    @id @default(autoincrement())
-  name  String
-  posts Post[]
-}
