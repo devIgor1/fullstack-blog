@@ -1,9 +1,8 @@
-import React from "react"
-import { AllPosts } from "./AllPosts"
-import back from "../../../public/backArrow.svg"
+import prisma from "@/lib/prisma"
 import Image from "next/image"
 import Link from "next/link"
-import prisma from "@/lib/prisma"
+import back from "../../../public/backArrow.svg"
+import { AllPosts } from "./AllPosts"
 
 const page = async () => {
   const posts = await prisma.post.findMany()
