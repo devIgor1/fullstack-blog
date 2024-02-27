@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import prisma from "@/lib/prisma"
+import { prisma } from "@/lib/prisma"
 import back from "../../../public/backArrow.svg"
 import Link from "next/link"
 
@@ -19,7 +19,6 @@ const page = async ({
       author: true,
     },
   })
-  console.log(post)
 
   return (
     <div>
