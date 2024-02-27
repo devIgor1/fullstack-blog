@@ -39,7 +39,7 @@ const page = async ({
           <>
             {post.imgURL && (
               <div
-                className="h-[500px] bg-cover bg-center mb-5"
+                className="h-[600px] w-full bg-center bg-no-repeat bg-cover  mb-5"
                 style={{ backgroundImage: `url(${post.imgURL})` }}
               ></div>
             )}
