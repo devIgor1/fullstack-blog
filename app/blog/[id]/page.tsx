@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client"
+import { prisma } from "@/lib/prisma"
 import Image from "next/image"
 import Link from "next/link"
 import back from "../../../public/backArrow.svg"
@@ -10,8 +10,6 @@ const page = async ({
     id: string
   }
 }) => {
-  const prisma = new PrismaClient()
-
   const post = await prisma.post.findUnique({
     where: {
       id: Number(params.id),
