@@ -67,4 +67,3 @@ model Post {
   imgURL     String?
   createdAt  DateTime   @default(now())
 }
-
