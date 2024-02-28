@@ -9,6 +9,9 @@ const Posts = async () => {
     orderBy: {
       createdAt: "desc",
     },
+    where: {
+      published: true,
+    },
   })
 
   const bgClasses = ["bg-pink-500", "bg-blue-500", "bg-yellow-500"]
