@@ -42,6 +42,7 @@ const NewBlogForm = () => {
         content,
         authorId: userId,
         imgURL: thumbnail,
+        published: true,
       }
 
       const post = await createPost(newPost)
