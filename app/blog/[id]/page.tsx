@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma"
+import { prisma } from "@/lib/db"
 import Image from "next/image"
 import Link from "next/link"
 import back from "../../../public/backArrow.svg"
