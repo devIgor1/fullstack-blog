@@ -10,22 +10,7 @@ const page = async () => {
 
   return (
     <>
-      <div className="container flex items-center justify-center">
-        <Link
-          href="/"
-          className="mx-5 flex items-center justify-center hover:underline "
-        >
-          <Image
-            src={back}
-            width={100}
-            height={100}
-            alt="backArrow.svg"
-            className="rotate-180"
-          />
-          <h1 className="text-4xl">Back to home</h1>
-        </Link>
-      </div>
-      <div className="border-2 px-7 py-11 rounded-sm mx-4">
+      <div className="px-7 py-11 rounded-sm mx-4">
         <h2 className="text-4xl text-center mb-14 container underline">
           All Articles
         </h2>
@@ -63,7 +48,7 @@ const page = async () => {
                       : ""}
                   </p>
                   <h1 className="text-xl mb-4 line-clamp-1">{post.title}</h1>
-                  <p className="text-xs mb-4 line-clamp-4">{post.content}</p>
+                  <p className="text-base mb-4 line-clamp-4">{post.content}</p>
                   <p className="text-indigo-600 hover:underline">Read More</p>
                 </div>
               </Link>
@@ -71,6 +56,19 @@ const page = async () => {
           ))}
         </div>
       </div>
+      <Link
+        href="/"
+        className="mt-5 flex items-center justify-center hover:underline "
+      >
+        <Image
+          src={back}
+          width={100}
+          height={100}
+          alt="backArrow.svg"
+          className="rotate-180"
+        />
+        <h1 className="text-4xl">Back to home</h1>
+      </Link>
     </>
   )
 }
