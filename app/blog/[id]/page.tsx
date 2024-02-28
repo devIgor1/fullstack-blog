@@ -21,25 +21,12 @@ const page = async ({
 
   return (
     <div>
-      <Link
-        href="/blog/all"
-        className="mx-5 flex items-center justify-center hover:underline "
-      >
-        <Image
-          src={back}
-          width={100}
-          height={100}
-          alt="backArrow.svg"
-          className="rotate-180"
-        />
-        <h1 className="text-4xl">All Articles</h1>
-      </Link>
-      <div className="container border-2 border-black">
+      <div className="container border-b-2 border-l-2 border-r-2 border-black">
         {post && (
           <>
             {post.imgURL && (
               <div
-                className="h-[600px] w-full bg-center bg-no-repeat bg-cover  mb-5"
+                className="h-[600px] w-full bg-center bg-no-repeat bg-cover border-b-2 border-black mb-5"
                 style={{ backgroundImage: `url(${post.imgURL})` }}
               ></div>
             )}
@@ -56,6 +43,19 @@ const page = async ({
               <p className="mt-4 whitespace-pre-wrap tracking-tight">
                 {post.content}
               </p>
+              <Link
+                href="/blog/all"
+                className="mx-5 flex items-center justify-center hover:underline "
+              >
+                <Image
+                  src={back}
+                  width={100}
+                  height={100}
+                  alt="backArrow.svg"
+                  className="rotate-180"
+                />
+                <h1 className="text-4xl">All Articles</h1>
+              </Link>
             </div>
           </>
         )}
