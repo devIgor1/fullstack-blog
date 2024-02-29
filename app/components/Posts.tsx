@@ -2,6 +2,7 @@ import React from "react"
 import PostCard from "./PostCard"
 import Image from "next/image"
 import { prisma } from "@/lib/db"
+import { revalidatePath } from "next/cache"
 
 const Posts = async () => {
   const posts = await prisma.post.findMany({
@@ -13,6 +14,8 @@ const Posts = async () => {
       published: true,
     },
   })
+
+  revalidatePath("/blog/all", "page")
 
   const bgClasses = ["bg-pink-500", "bg-blue-500", "bg-yellow-500"]
 
