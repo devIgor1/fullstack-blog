@@ -9,6 +9,21 @@
   src: url("/fonts/primary.otf");
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 @layer components {
   .container-sm {
     @apply max-w-md mx-auto sm:max-w-lg;
