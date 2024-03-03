@@ -3,6 +3,7 @@
 import { api } from "@/lib/api"
 import { Post } from "@prisma/client"
 import { useRouter } from "next/navigation"
+import { toast } from "sonner"
 
 interface MyPostsProps {
   posts: Post[]
@@ -18,7 +19,7 @@ export default function MyPosts({ posts }: MyPostsProps) {
           id: postId,
         },
       })
-      alert("Post deleted successfully")
+      toast.success("Post deleted successfully")
       router.refresh()
     } catch (error) {
       console.log(error)

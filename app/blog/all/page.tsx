@@ -4,6 +4,7 @@ import { format } from "date-fns"
 import Image from "next/image"
 import Link from "next/link"
 import back from "../../../public/backArrow.svg"
+import { revalidatePath } from "next/cache"
 
 const page = async () => {
   const posts = await prisma.post.findMany({
@@ -11,6 +12,8 @@ const page = async () => {
       published: true,
     },
   })
+
+  revalidatePath("/", "page")
 
   return (
     <>
