@@ -9,7 +9,7 @@ interface MyPostsProps {
   posts: Post[]
 }
 
-export function MyPosts({ posts }: MyPostsProps) {
+export default function MyPosts({ posts }: MyPostsProps) {
   const router = useRouter()
 
   async function handleDeletePost(postId: number) {
