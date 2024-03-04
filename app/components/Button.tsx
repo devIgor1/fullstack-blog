@@ -41,6 +41,12 @@ export const Button = () => {
         </Link>
         <div className="text-white bg-black px-4 py-2 flex items-center justify-center flex-col">
           <h1>Hi, {session?.user?.name}</h1>
+          <Link
+            href="/blog/my-posts"
+            className="bg-white text-black p-2 mt-2 rounded-sm"
+          >
+            My posts
+          </Link>
           <button
             onClick={handleLogoutUser}
             className="mt-5 hover:scale-105 duration-300"

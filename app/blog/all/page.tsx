@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/db"
+import prisma from "@/lib/db"
 import { Post } from "@prisma/client"
 import { format } from "date-fns"
 import Image from "next/image"

@@ -1,9 +1,5 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
 
-import { PiGithubLogoLight } from "react-icons/pi"
-import { PiLinkedinLogoLight } from "react-icons/pi"
+import { PiGithubLogoLight, PiLinkedinLogoLight } from "react-icons/pi"
 
 type Props = {}
 

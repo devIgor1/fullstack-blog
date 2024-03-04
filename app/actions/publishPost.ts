@@ -1,5 +1,5 @@
 "use server"
-import { prisma } from "@/lib/db"
+import prisma from "@/lib/db"
 import { Prisma } from "@prisma/client"
 
 export async function createPost(postInfo: Prisma.PostUncheckedCreateInput) {
