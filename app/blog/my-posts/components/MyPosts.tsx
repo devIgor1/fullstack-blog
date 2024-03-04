@@ -86,7 +86,7 @@ export default function MyPosts({ posts }: MyPostsProps) {
                 </div>
                 <div className="flex items-center mb-10 mt-5">
                   <input
-                    className="p-2 rounded-md w-[450px] md:w-[700px] outline-none bg-zinc-900 text-white placeholder:text-white/80"
+                    className="p-2 rounded-md w-[450px] md:w-[700px] outline-none bg-black text-white placeholder:text-white"
                     placeholder="Search posts..."
                     type="search"
                     onChange={(e) => setSearch(e.target.value)}
