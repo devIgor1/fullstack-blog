@@ -57,7 +57,7 @@ export default function PaginationSection({
             key={idx}
             className={
               currentPage === page
-                ? "bg-zinc-900 rounded-md text-white cursor-pointer"
+                ? "bg-black rounded-md text-white cursor-pointer"
                 : "cursor-pointer"
             }
           >
