@@ -7,7 +7,9 @@ export async function getPosts() {
   const session = await getServerSession()
 
   const posts = await prisma.post.findMany({
-    where: { authorId: session?.user.id },
+    where: {
+      author: session?.user,
+    },
   })
 
   return posts
