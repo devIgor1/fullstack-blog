@@ -48,7 +48,7 @@ export default function MyPosts({ posts }: MyPostsProps) {
               No posts found
             </h1>
             <p className="text-gray-600">
-              Looks like this blog doesn't have any posts yet.
+              Looks like this blog doesn&apos;t have any posts yet.
             </p>
             <svg
               width="534"
@@ -66,9 +66,12 @@ export default function MyPosts({ posts }: MyPostsProps) {
                 </clipPath>
               </defs>
             </svg>
-            <button className="bg-black text-white p-2 rounded-md hover:bg-black/85 duration-300">
+            <Link
+              href={"/blog/new"}
+              className="bg-black text-white p-2 rounded-md hover:bg-black/85 duration-300"
+            >
               Write a post
-            </button>
+            </Link>
           </div>
         </div>
       ) : (
