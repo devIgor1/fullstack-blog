@@ -43,7 +43,7 @@ export const Button = () => {
           <h1>Hi, {session?.user?.name}</h1>
           <Link
             href="/blog/my-posts"
-            className="bg-white text-black p-2 mt-2 rounded-sm"
+            className="bg-white text-black p-2 mt-2 rounded-sm hover:bg-white/90 duration-300"
           >
             My posts
           </Link>
