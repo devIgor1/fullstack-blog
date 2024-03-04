@@ -1,4 +1,4 @@
-# Papers - Full Stack Blog Application
+# Papers - A Full Stack Blog Application
 
 ![image](https://github.com/devIgor1/fullstack-blog/assets/88665118/97b490d2-864d-4d70-a26e-0345ee3ee2b6)
 
